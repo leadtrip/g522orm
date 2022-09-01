@@ -7,6 +7,6 @@ class Cyclist {
     static hasMany = [teams: Team]
 
     static mapping = {
-        teams column: 'team_team_id', joinTable: 'CYCLIST_TEAM_TBL'
+        teams column: 'cyclist_id', joinTable: 'CYCLIST_TEAM_TBL'
     }
 }

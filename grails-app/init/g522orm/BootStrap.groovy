@@ -24,9 +24,16 @@ class BootStrap {
     }
 
     def addCyclists() {
+        def bob = new Cyclist(name: 'Bob')
+
         new Team(name: 'Going nowhere')
-            .addToCyclist(new Cyclist(name: 'Bob'))
+            .addToCyclist(bob)
             .addToCyclist(new Cyclist(name: 'Karen'))
+            .save()
+
+        new Team(name: 'Wheelie good')
+            .addToCyclist(bob)
+            .addToCyclist(new Cyclist(name: 'Les'))
             .save()
     }
 
