@@ -1,5 +1,7 @@
 The following diagrams depict the schema created by grails for the various domain relationships
 
+View the schema at http://localhost:3719/h2-console
+
 one 2 one
 ------------------------------------------
 | door      | handle | letter_box |
