@@ -1,6 +1,7 @@
 package g522orm
 
 import grails.gorm.transactions.Transactional
+import wood.mike.modelling.basicCollectionTypes.Person
 import wood.mike.modelling.joinTable.Cyclist
 import wood.mike.modelling.joinTable.Team
 import wood.mike.modelling.many2many.Author
@@ -21,6 +22,7 @@ class BootStrap {
         addMotherboard()
         addBooks()
         addCyclists()
+        addPersons()
     }
 
     def addCyclists() {
@@ -59,6 +61,15 @@ class BootStrap {
         mobo.addToHardDrives(hdd1)
         mobo.addToHardDrives(hdd2)
         mobo.save()
+    }
+
+    def addPersons() {
+        def person1 = new Person(name: 'Arnold')
+        person1.nicknames = ['Arn', 'Arnie']
+        person1.friends = ['Jon', 'Kev']
+        person1.allergies = ['Hayfever', 'Work']
+        person1.features = [height: '180', footSize: '10']
+        person1.save()
     }
 
     def destroy = {

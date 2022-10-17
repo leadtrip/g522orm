@@ -29,3 +29,25 @@ join table
 |-------|-------|----------------|
 |id     |id     |cyclist_team_id |
 |name   |name   |team_team_id    |
+
+# basic collection types
+-----------------------------
+# person
+|id|name|
+|----|----|
+
+# person_nicknames (Set, default)
+|person_id|nicknames_string|
+|---------|----------------|
+
+# person_allergies (Collection)
+| id |allergies_string|
+|----|----------------|
+
+# person_friends (List)
+|person_id|friends_string|friends_idx|
+|---------|--------------|-----------|
+
+# person_features (Map)
+|person_id|features_object|features_idx|features_elt|
+|---------|---------------|------------|------------|
