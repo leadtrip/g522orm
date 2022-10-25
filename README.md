@@ -52,3 +52,10 @@ join table
 ### person_features (Map)
 |person_id|features_object|features_idx|features_elt|
 |---------|---------------|------------|------------|
+
+# composition
+
+### motorist
+|id|daily_runner_mfr|daily_runner_type|daily_runner_model|weekend_special_mfr|weekend_special_model| weekend_special_model  |
+|----|----|----|----|----|----|------------------------|
+|

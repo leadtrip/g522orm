@@ -2,6 +2,8 @@ package g522orm
 
 import grails.gorm.transactions.Transactional
 import wood.mike.modelling.basicCollectionTypes.Person
+import wood.mike.modelling.composition.Motorist
+import wood.mike.modelling.composition.Vehicle
 import wood.mike.modelling.joinTable.Cyclist
 import wood.mike.modelling.joinTable.Team
 import wood.mike.modelling.many2many.Author
@@ -23,6 +25,7 @@ class BootStrap {
         addBooks()
         addCyclists()
         addPersons()
+        addMotorists()
     }
 
     def addCyclists() {
@@ -70,6 +73,13 @@ class BootStrap {
         person1.allergies = ['Hayfever', 'Work']
         person1.features = [height: '180', footSize: '10']
         person1.save()
+    }
+
+    def addMotorists() {
+        def motorist1 = new Motorist(name: 'Barry')
+        motorist1.dailyRunner = new Vehicle(type: 'Car', mfr: 'Renault', model: '5')
+        motorist1.weekendSpecial = new Vehicle(type: 'Bike', mfr: 'Specialized', model: 'Tarmac')
+        motorist1.save()
     }
 
     def destroy = {
