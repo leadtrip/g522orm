@@ -1,9 +1,9 @@
-package wood.mike.modelling.one2many
+package g522orm
 
-import grails.testing.gorm.DomainUnitTest
+import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class CpuSpec extends Specification implements DomainUnitTest<Cpu> {
+class AirportControllerSpec extends Specification implements ControllerUnitTest<AirportController> {
 
     def setup() {
     }
